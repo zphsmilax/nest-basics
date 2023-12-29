@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package main_service;
+
+
+service hello {
+    rpc Get_Message (Empty) returns (HealthMessage);
+}
+
+message Empty {}
+
+message HealthMessage {
+    bool status = 1;
+    string message = 2;
+  }
